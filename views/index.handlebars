@@ -1,0 +1,45 @@
+<div class="title-section">
+  <div class="text-center">
+    <h1>Eat-Da-Burger!</h1>
+    <h3>Make a Burger, Eat a Burger!</h3>
+    <img class="img shadow rounded" src="/assets/images/burger.jpg" style="height: 400px; padding-top: 10px;" alt="burger">
+  </div>
+</div>
+
+<div class="your_burger">
+  <h2 class="text-center">Add Your Burger!</h2>
+  <div class="row">
+    <div class="col s12">
+      <form class="form_1">
+        <div class="form-group text-center">
+          <label for="new-burger">Name:</label>
+          <input type="text" id="new-burger" name="name">
+          <button type="submit" class="btn">Add Your Burger</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 undevoured-burgers">
+        <h2>Burgers You Can Eat!</h2>
+        {{#each burgers}}
+        {{> burgers/burger-block devouredSection=false}}
+        {{/each}}
+      </div>
+
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-5 devoured-burgers">
+        <h2>Burgers Already Eaten</h2>
+        {{#each burgers}}
+        {{> burgers/burger-block devouredSection=true}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</main>
+

@@ -1,0 +1,15 @@
+<div class="burger">
+    
+    {{#if devouredSection}}
+        {{#if devoured}}
+        {{burger_name}}
+        {{/if}}
+
+    {{else}}
+        {{#unless devoured}}
+        {{burger_name}}
+        <button type='button' style="margin-left: 30px;" class='btn eat-da-burger' data-id="{{id}}">Devour!</button>
+        {{/unless}}
+    {{/if}}
+
+</div>
